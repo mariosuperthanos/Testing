@@ -10,8 +10,10 @@ const swapi = require('./script2');
   // test. This is often useful when testing asynchronous
   // code, in order to make sure that assertions in a
   // callback actually got called.
+
 //   expect.assertions(1);
-//   // This tells Jest to wait for the promise to resolve (or reject) before determining if the test passed or failed
+// // This tells Jest to wait for the promise to resolve (or reject) before determining if the test passed or failed
+
 //   return swapi.getPeople(fetch).then(data =>{
 //     expect(data.mass).toEqual('77');
 //   });
