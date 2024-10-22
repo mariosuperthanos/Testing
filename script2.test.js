@@ -5,7 +5,11 @@ const swapi = require('./script2');
 // Asyncronous unit tests
 
 // it('calls swapi to get people', ()=>{
-//   // This is used to ensure that exactly one assertion (expect) is called in the test. If that assertion is not executed (e.g., because the promise was rejected or the code did not reach the expect call), the test will fail.
+  // expect.assertions(number) verifies that a
+  // certain number of assertions are called during a
+  // test. This is often useful when testing asynchronous
+  // code, in order to make sure that assertions in a
+  // callback actually got called.
 //   expect.assertions(1);
 //   // This tells Jest to wait for the promise to resolve (or reject) before determining if the test passed or failed
 //   return swapi.getPeople(fetch).then(data =>{
@@ -63,3 +67,11 @@ it('getPeople returns mass and films', ()=>{
     expect(data.films.length).toBeGreaterThan(3);
   });
 });
+
+
+// Mock functions are also known as "spies", because
+// they let you spy on the behavior of a function that is
+// called indirectly by some other code, rather than just
+// testing the output. You can create a mock function with
+// jest.fn(). If no implementation is given, the mock
+// function will return undefined when invoked.
